@@ -1,19 +1,498 @@
-@media (max-width: 1400px) {
+@media (max-width: 1920px) {
+	.container {
+		padding-right: calc((100vw - 1600px) / 2);
+		padding-left: calc((100vw - 1600px) / 2);
+	}
 
+	.projects__prev-btn {
+		left: calc(160px - (160px - calc((100vw - 1600px) / 2)));
+	}
+
+	.projects__next-btn {
+		right: calc(160px - (160px - calc((100vw - 1600px) / 2)));
+	}
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1690px) {
+	.container {
+		padding-right: calc((100vw - 1330px) / 2);
+		padding-left: calc((100vw - 1330px) / 2);
+	}
 
+	.hero__background {
+		height: 100%;
+	}
+
+	.gallery__container {
+		padding-bottom: 80px;
+	}
+
+	.events__slide {
+		padding-top: 255px;
+	}
+
+	.projects__prev-btn {
+		left: calc(160px - (160px - calc((100vw - 1330px) / 2)));
+	}
+
+	.projects__next-btn {
+		right: calc(160px - (160px - calc((100vw - 1330px) / 2)));
+	}
+
+	.dropdown__item:not(:last-child) {
+		margin-right: 60px;
+	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1399px) {
+	.container {
+		padding-right: calc((100vw - 1060px) / 2);
+		padding-left: calc((100vw - 1060px) / 2);
+	}
 
+	.header__logo {
+		margin-right: 30px;
+	}
+
+	.nav__list {
+		gap: 40px;
+	}
+
+	.dropdown__item:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	.projects__prev-btn {
+		left: calc(160px - (160px - calc((100vw - 1080px) / 2)));
+	}
+
+	.projects__next-btn {
+		right: calc(160px - (160px - calc((100vw - 1080px) / 2)));
+	}
+
+	.ac-text__wrapper {
+		height: 440px;
+	}
+
+	.ac-panel__rect {
+		width: 220px;
+		height: 165px;
+	}
+
+	.ac-panel__wrap {
+		padding-top: 30px;
+	}
+
+	.events__slide {
+		padding-top: 200px;
+		padding-left: 33px;
+	}
+
+	.ac__artist-link {
+		margin-right: 60px;
+	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1125px) {
+	.container {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 
+	.header__container {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header__small-search.dropped {
+		bottom: 34px;
+		flex-direction: row;
+	}
+
+	.header__burger {
+		display: flex;
+	}
+
+	.header__logo {
+		margin-top: -2px;
+		margin-right: 65.5px;
+	}
+
+	.header__image {
+		width: 188px;
+	}
+
+	.nav__list {
+		gap: 0;
+		margin-bottom: auto;
+	}
+
+	.header__nav {
+		position: absolute;
+		top: 0;
+		left: -100vw;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100vw;
+		height: 100vh;
+		padding: 33px 0 50px 48px;
+		background-color: rgba(0, 0, 0, 0.9);
+		transition: left .3s ease-in-out;
+		z-index: 10;
+	}
+
+	.nav__link {
+		padding: 0;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 64px;
+	}
+
+	.header__burger-close {
+		position: relative;
+		width: 37px;
+		height: 37px;
+
+		margin-bottom: 31px;
+	}
+
+	.burger-close__line {
+		position: absolute;
+		top: 17px;
+		right: 2.5px;
+
+		width: 100%;
+		height: 3px;
+		background-color: white;
+		transform: translateX(-5px);
+	}
+
+	.burger-close__line_one {
+		transform: rotate(-45deg);
+	}
+
+	.burger-close__line_two {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+
+	.header__nav.active {
+		left: 0;
+	}
+
+	.nav__list {
+		flex-direction: column;
+	}
+
+	.nav__login {
+		padding: 15px 90px;
+		border: 2px solid var(--amethyst);
+		border-radius: 100px;
+	}
+
+	.header__bottom {
+		display: none;
+	}
+
+	.hero__container {
+		padding-top: 105px;
+		padding-bottom: 118px;
+		background-image: url('../img/hero-background-tablet.jpg');
+		background-position: left bottom;
+	}
+
+	.hero__background {
+		display: none;
+	}
+
+	.hero__wrapper {
+		width: 660px;
+	}
+
+	.hero__title {
+		margin-bottom: -12px;
+	}
+
+	.hero__descr {
+		margin-bottom: 133px;
+	}
+
+	.hero__background-image {
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.about__wrapper {
+		max-width: 925px;
+	}
+
+	.choices {
+		width: 280px;
+		margin-bottom: 113.5px;
+	}
+
+	.gallery__container {
+		padding-bottom: 77px;
+	}
+
+	.gallery__wrapper {
+		margin-right: 38px;
+	}
+
+	.catalog__container {
+		padding-bottom: 80px;
+	}
+
+	.catalog__arts {
+		gap: 50px;
+	}
+
+	.catalog__artist {
+		width: 437px;
+	}
+
+	.catalog__names {
+		width: 437px;
+	}
+
+	.ac__artist-link {
+		margin-right: 65px;
+	}
+
+	.ac-panel__rect {
+		width: 190px;
+		height: 130px;
+	}
+
+	.ac-panel__wrap {
+		width: 50%;
+	}
+
+	.accordion__item .accordion__trigger {
+		padding: 39.5px 0 42.5px 0;
+	}
+
+	.artist__live {
+		margin-bottom: 18px;
+	}
+
+	.events__container {
+		padding-bottom: 118px;
+	}
+
+	.events__slide {
+		padding-top: 212px;
+		padding-left: 33px;
+	}
+
+	.events__slide_one {
+		background-image: url('../img/events_engraving-tablet.jpg');
+	}
+
+	.events__slide_two {
+		background-image: url('../img/events_discussion-tablet.jpg');
+	}
+
+	.events__slide_three {
+		background-image: url('../img/events_show-tablet.jpg');
+	}
+
+	.events__slide_four {
+		background-image: url('../img/events_john-tablet.jpg');
+	}
+
+	.events__slide_five {
+		background-image: url('../img/events_international-tablet.jpg');
+	}
+
+	.events__time,
+	.events__placement {
+		text-align: right;
+	}
+
+	.events__time {
+		margin-bottom: 6px;
+	}
+
+	.events__navigation {
+		display: none;
+	}
+
+	.events__slide {
+		height: 682px;
+		padding-bottom: 17px;
+	}
+
+	.events__header {
+		margin-bottom: 5px;
+	}
+
+	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+	.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		margin: 0 10px;
+	}
+
+	.projects__swiper {
+		margin: 0 54px;
+	}
+
+	.projects__slide {
+		height: 127px;
+	}
+
+	.projects__next-btn {
+		right: 50px;
+		bottom: 130px;
+	}
+
+	.projects__prev-btn {
+		left: 50px;
+		bottom: 130px;
+	}
+
+	.projects__slide-wrapper_one {
+		max-width: 210px;
+	}
+
+	.projects__slide-wrapper_two {
+		max-width: 285px;
+	}
+
+	.projects__slide-wrapper_three {
+		max-width: 230px;
+	}
+
+	.projects__slide-wrapper_four {
+		max-width: 105px;
+	}
+
+	.projects__slide-wrapper_five {
+		max-width: 150px;
+	}
+
+	.projects__slide-wrapper_six {
+		max-width: 215px;
+	}
+
+	.projects__slide-wrapper_seven {
+		max-width: 245px;
+	}
+
+	.projects__slide-wrapper_eight {
+		max-width: 155px;
+	}
+
+	.projects__slide-wrapper_nine {
+		max-width: 195px;
+	}
+
+	.contact__container {
+		padding-top: 41px;
+		padding-bottom: 45px;
+	}
+
+	.contact__title {
+		margin-bottom: 12px;
+	}
+
+	.contact__address {
+		margin-bottom: 29px;
+		font-size: 14px;
+		line-height: 19px;
+	}
+
+	.contact__button {
+		padding: 11px 42px;
+	}
+
+	.contact__form {
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
+
+	.footer__container {
+		padding-top: 50px;
+		padding-bottom: 38px;
+	}
+
+	.footer__contacts {
+		gap: 22px;
+		margin-top: -9px;
+	}
+
+	.footer__link svg {
+		width: 59px;
+		height: 59px;
+	}
 }
 
-@media (max-width: 320px) {
-	
+@media (max-width: 900px) {
+	.header__logo {
+		margin-right: 70.5px;
+	}
+
+	.header__open-search svg {
+		width: 28px;
+	}
+
+	.gallery__container {
+		flex-wrap: wrap;
+	}
+
+	.gallery__form {
+		margin-bottom: 22.5px;
+	}
+
+	.choices {
+		margin-bottom: 47.5px;
+	}
+
+	.catalog__container {
+		padding-bottom: 64px;
+	}
+
+	.catalog__arts {
+		flex-direction: column-reverse;
+	}
+
+	.catalog__descr {
+		margin-bottom: 20px;
+	}
+
+	.catalog__names {
+		width: 100%;
+	}
+
+	.ac-text__wrapper {
+		height: 339px;
+	}
+
+	.ac__artist-link {
+		margin-right: 59px;
+	}
+
+	.ac-panel__rect {
+		width: 275px;
+		height: 190px;
+	}
+
+	.ac-panel__wrap {
+		padding-top: 43px;
+	}
+
+	.catalog__artist {
+		width: 100%;
+	}
+
+	.artist__image {
+		margin-bottom: 22px;
+	}
+
+	.artist__live {
+		margin-bottom: 8px;
+	}
 }
+
+@media (max-width: 320px) {}

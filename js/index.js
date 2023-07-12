@@ -1,8 +1,41 @@
+let slides,
+	eventSlide,
+	gallerySpace,
+	eventSpace,
+	projectSpace,
+	group;
+
+let viewWidth = window.innerWidth;
+if (viewWidth > 1690) {
+	eventSlide = 3;
+	slides = 3;
+	group = 3;
+	gallerySpace = 50;
+	eventSpace = 50;
+	projectSpace = 50;
+} else if (viewWidth > 1124) {
+	eventSlide = 3;
+	slides = 2;
+	group = 2;
+	gallerySpace = 50;
+	eventSpace = 50;
+	projectSpace = 50;
+} else {
+	eventSlide = 2;
+	slides = 2;
+	group = 2;
+	gallerySpace = 34;
+	eventSpace = 34;
+	projectSpace = 50;
+}
+
+
+
 // header dropdown
 const dropdownButtons = document.querySelectorAll('.dropdown__button');
 
 for (let drop of dropdownButtons) {
-	drop.addEventListener('click', function() {
+	drop.addEventListener('click', function () {
 		let dropdownItem = drop.parentElement;
 		dropdownItem.classList.toggle('active');
 		let activeExist = document.querySelectorAll('.dropdown__item.active');
@@ -20,15 +53,15 @@ for (let drop of dropdownButtons) {
 const gallerySwiper = new Swiper(".gallery__swiper", {
 	direction: "horizontal",
 	loop: true,
-	slidesPerGroup: 3,
-	slidesPerView: 3,
-	spaceBetween: 50,
+	slidesPerGroup: group,
+	slidesPerView: slides,
+	spaceBetween: gallerySpace,
 
 	slideClass: "gallery__slide",
 
 	pagination: {
-		el: ".gallery__pagination",
-		type: "fraction",
+		el: '.gallery__pagination',
+		type: 'fraction',
 	},
 
 	navigation: {
@@ -65,13 +98,18 @@ for (let link of artistLinks) {
 // event
 const eventsSwiper = new Swiper(".events__swiper", {
 	direction: "horizontal",
-	slidesPerGroup: 1,
-	slidesPerView: 3,
-	spaceBetween: 50,
+	slidesPerGroup: eventSlide,
+	slidesPerView: eventSlide,
+	spaceBetween: eventSpace,
 
 	navigation: {
 		nextEl: '.events__navigation_next',
 		prevEl: '.events__navigation_prev',
+	},
+
+	pagination: {
+		el: '.events__pagination',
+		type: 'bullets',
 	}
 });
 
@@ -84,13 +122,13 @@ tippy("[data-tippy-content]", {
 
 const projectsSwiper = new Swiper(".projects__swiper", {
 	loop: true,
-	slidesPerGroup: 1,
-	slidesPerView: 3,
-	spaceBetween: 50,
+	slidesPerGroup: group,
+	slidesPerView: slides,
+	spaceBetween: projectSpace,
 
 	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
+		nextEl: ".projects__next-btn",
+		prevEl: ".projects__prev-btn",
 	}
 })
 
@@ -164,11 +202,35 @@ function init() {
 	newMap.geoObjects.add(newGeoObject);
 
 	newMap.controls.remove('geolocationControl');
-    newMap.controls.remove('searchControl');
-    newMap.controls.remove('fullscreenControl');
-    newMap.controls.remove('zoomControl');
-    newMap.controls.remove('rulerControl');
-    newMap.controls.remove('typeSelector');
-    newMap.controls.remove('trafficControl');
-    newMap.controls.remove('gotomaps');
+	newMap.controls.remove('searchControl');
+	newMap.controls.remove('fullscreenControl');
+	newMap.controls.remove('zoomControl');
+	newMap.controls.remove('rulerControl');
+	newMap.controls.remove('typeSelector');
+	newMap.controls.remove('trafficControl');
+	newMap.controls.remove('gotomaps');
 };
+
+// burger
+const burgerButton = document.querySelector('.header__burger');
+const headerNav = document.querySelector('.header__nav');
+const burgerClose = document.querySelector('.burger__close');
+burgerButton.addEventListener('click', function() {
+	headerNav.classList.add('active');
+})
+burgerClose.addEventListener('click', function() {
+	headerNav.classList.remove('active');
+})
+
+// searchDrop
+const searchDrop = document.querySelector('.header__open-search');
+const searchClose = document.querySelector('.small-search__close');
+const searchForm = document.querySelector('.header__small-search');
+searchDrop.addEventListener('click', function() {
+	searchForm.classList.add('dropped');
+})
+
+searchClose.addEventListener('click', function(btn) {
+	btn.preventDefault();
+	searchForm.classList.remove('dropped');
+})

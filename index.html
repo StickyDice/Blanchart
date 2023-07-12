@@ -23,10 +23,49 @@
 <body class="page">
 	<header class="header">
 		<div class="header__container container header__top">
+			<div class="header__burger burger">
+				<span class="burger__line burger__line_one"></span>
+				<span class="burger__line burger__line_two"></span>
+				<span class="burger__line burger__line_three"></span>
+			</div>
+			<picture class="header__logo">
+				<img src="img/logo-desktop.svg" class="header__image" alt="Логотип Blanchart">
+			</picture>
+			<button class="header__open-search">
+				<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="9.15446" height="2.28862"
+						transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white" />
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+						fill="white" />
+				</svg>
+			</button>
+			<form action="" class="header__small-search small-search">
+				<button class="small-search__submit">
+					<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="9.15446" height="2.28862"
+							transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+							fill="white" />
+					</svg>
+				</button>
+				<input type="text" class="small-search__input">
+				<button class="small-search__close">
+					<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="29.567" height="2.9567"
+							transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09375 0)" fill="white" />
+						<rect width="29.567" height="2.9567"
+							transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9074)" fill="white" />
+					</svg>
+				</button>
+			</form>
+
 			<nav class="header__nav nav">
-				<picture class="header__logo">
-					<img src="img/logo-desktop.svg" alt="Логотип Blanchart">
-				</picture>
+				<div class="header__burger-close burger__close">
+					<span class="burger-close__line burger-close__line_one"></span>
+					<span class="burger-close__line burger-close__line_two"></span>
+				</div>
 				<ul class="nav__list list-reset">
 					<li class="nav__item">
 						<a href="#" class="nav__link">
@@ -71,7 +110,7 @@
 				</a>
 			</nav>
 		</div>
-		<div class="header__container header__bottom container">
+		<div class="header__bottom container">
 			<div class="header__dropdown dropdown">
 				<div class="dropdown__first dropdown__item">
 					<button class="dropdown__button">
@@ -79,7 +118,6 @@
 						<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M11 1L6 6L1 1" stroke="white" />
 						</svg>
-
 					</button>
 					<div class="dropdown__content">
 						<div class="dropdown__wrapper" data-simplebar data-simplebar-auto-hide="false">
@@ -208,7 +246,9 @@
 					</button>
 				</div>
 				<div class="hero__background">
-					<img class="hero__background-image" src="img/hero-background.jpg" alt="Cover">
+					<picture class="hero__picture">
+						<img class="hero__background-image" src="img/hero-background.jpg" alt="Cover">
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -218,14 +258,16 @@
 				<div class="about__wrapper">
 					<h2 class="about__title section__title">О&nbsp;нас</h2>
 					<p class="about__descr section__descr">
-						Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет
+						Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно
+						определяет
 						каждого участника как способного принимать собственные решения касаемо распределения внутренних
 						резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип
 						будущего проекта влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития.
 						Повседневная практика показывает, что высокое качество позиционных исследований создаёт
 						необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий
 						с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках
-						спецификации современных стандартов, действия представителей оппозиции набирают популярность среди
+						спецификации современных стандартов, действия представителей оппозиции набирают популярность
+						среди
 						определённых слоёв населения, а&nbsp;значит, должны быть разоблачены.
 					</p>
 				</div>
@@ -270,7 +312,7 @@
 								<path d="M6 11L0.999995 6L6 0.999998" stroke="white" />
 							</svg>
 						</button>
-						<div class="gallery__pagination"></div>
+						<div class="gallery__pagination swiper-pagination"></div>
 						<button class="gallery__navigation gallery__navigation_next">
 							<svg width="7" height="12" viewBox="0 0 7 12" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -281,32 +323,56 @@
 					<div class="gallery__swiper-wrapper swiper-wrapper">
 						<div class="gallery__slide swiper-slide">
 							<a href="#" class="gallery__link">
-								<img src="img/gallery-image-1.jpg" alt="">
+								<picture class="gallery__picture">
+									<source srcset="img/gallery-image-1-small-tablet.jpg" media="(max-width: 900px)">
+									<source srcset="img/gallery-image-1.jpg" media="(max-width: 1125px)">
+									<img src="img/gallery-image-1-tablet.jpg" alt="">
+								</picture>
 							</a>
 						</div>
 						<div class="gallery__slide swiper-slide">
 							<a href="#" class="gallery__link">
-								<img src="img/gallery-image-2.jpg" alt="">
+								<picture class="gallery__picture">
+									<source srcset="img/gallery-image-2-small-tablet.jpg" media="(max-width: 900px)">
+									<source srcset="img/gallery-image-2.jpg" media="(max-width: 1125px)">
+									<img src="img/gallery-image-2-tablet.jpg" alt="">
+								</picture>
 							</a>
 						</div>
 						<div class="gallery__slide swiper-slide">
 							<a href="#" class="gallery__link">
-								<img src="img/gallery-image-3.jpg" alt="">
+								<picture class="gallery__picture">
+									<source srcset="img/gallery-image-3-small-tablet.jpg" media="(max-width: 900px)">
+									<source srcset="img/gallery-image-3.jpg" media="(max-width: 1125px)">
+									<img src="img/gallery-image-3-tablet.jpg" alt="">
+								</picture>
 							</a>
 						</div>
 						<div class="gallery__slide swiper-slide">
 							<a href="#" class="gallery__link">
-								<img src="img/gallery-image-4.jpg" alt="">
+								<picture class="gallery__picture">
+									<source srcset="img/gallery-image-4-small-tablet.jpg" media="(max-width: 900px)">
+									<source srcset="img/gallery-image-4.jpg" media="(max-width: 1125px)">
+									<img src="img/gallery-image-4-tablet.jpg" alt="">
+								</picture>
 							</a>
 						</div>
 						<div class="gallery__slide swiper-slide">
 							<a href="#" class="gallery__link">
-								<img src="img/gallery-image-5.jpg" alt="">
+								<picture class="gallery__picture">
+									<source srcset="img/gallery-image-5-small-tablet.jpg" media="(max-width: 900px)">
+									<source srcset="img/gallery-image-5.jpg" media="(max-width: 1125px)">
+									<img src="img/gallery-image-5-tablet.jpg" alt="">
+								</picture>
 							</a>
 						</div>
 						<div class="gallery__slide swiper-slide">
 							<a href="#" class="gallery__link">
-								<img src="img/gallery-image-6.jpg" alt="">
+								<picture class="gallery__picture">
+									<source srcset="img/gallery-image-6-small-tablet.jpg" media="(max-width: 900px)">
+									<source srcset="img/gallery-image-6.jpg" media="(max-width: 1125px)">
+									<img src="img/gallery-image-6-tablet.jpg" alt="">
+								</picture>
 							</a>
 						</div>
 					</div>
@@ -448,8 +514,8 @@
 								</button>
 							</h3>
 							<div class="ac-panel accordion__panel">
-								<div class="ac-text accordion__text">
-									<div class="ac__first-column">
+								<div class="ac-text__wrapper">
+									<div class="ac-text accordion__text">
 										<a class="ac__artist-link" data-exist="false">Бенедетто ди&nbsp;Биндо</a>
 										<a class="ac__artist-link" data-exist="false">Бергоньоне, Амброджо</a>
 										<a class="ac__artist-link" data-exist="false">Биссоло, Франческо</a>
@@ -461,8 +527,6 @@
 										<a class="ac__artist-link" data-exist="false">Брамантино</a>
 										<a class="ac__artist-link" data-exist="false">Бреа, Людовико</a>
 										<a class="ac__artist-link" data-exist="false">Бьяджо д&rsquo;Антонио Туччи</a>
-									</div>
-									<div class="ac__second-column">
 										<a class="ac__artist-link" data-exist="false">Веккьетта</a>
 										<a class="ac__artist-link" data-exist="false">Андреа Верроккьо</a>
 										<a class="ac__artist-link" data-exist="true" data-artist="domeniko">Доменико
@@ -476,8 +540,6 @@
 											ди&nbsp;Паоло</a>
 										<a class="ac__artist-link" data-exist="true"
 											data-artist="giorgione">Джорджоне</a>
-									</div>
-									<div class="ac__third-column">
 										<a class="ac__artist-link" data-exist="false">Парентино, Бернардо</a>
 										<a class="ac__artist-link" data-exist="false">Пезеллино</a>
 										<a class="ac__artist-link" data-exist="false">Пьетро Перуджино</a>
@@ -670,7 +732,7 @@
 								<span class="events__placement">Еврейский музей</span>
 								<p class="events__time"><time datetime="2023-03-31">с 31 марта</time> по <time
 										datetime="2023-04-21">21 апреля</time></p>
-								<h3 class="events__header">Выставка &laquo;Формация 2020&raquo;</h3>
+								<h3 class="events__header">Выставка &laquo;Формация&nbsp;2020&raquo;</h3>
 								<p class="events__descr">
 									Идейные соображения высшего порядка, а&nbsp;также современная методология разработки
 									играет важную роль в&nbsp;формировании глубокомысленных рассуждений
@@ -711,19 +773,20 @@
 							<path d="M1.33334 0.666663L9.66667 9L1.33334 17.3333" stroke="black" />
 						</svg>
 					</button>
+					<div class="events__pagination swiper-pagination"></div>
 				</div>
 			</div>
 		</section>
 
 		<section class="projects section">
 			<div class="projects__container container">
-				<h2 class="project__title section__title">Проекты</h2>
+				<h2 class="projects__title section__title">Проекты</h2>
 				<p class="projects__descr">
-					Предварительные выводы: постоянное информационно&mdash;пропагандистское обеспечение нашей
+					Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей
 					деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё
 					независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой
 					неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное
-					информационно&nbsp;&mdash; пропагандистское <button class="tooltip tooltip-one"
+					информационно-пропагандистское <button class="tooltip tooltip-one"
 						data-tippy-content="Пример современных тенденций — современная методология разработки"></button>
 					обеспечение нашей
 					деятельности однозначно фиксирует
@@ -800,7 +863,7 @@
 		<section class="contact section">
 			<div class="contact__container container">
 				<div class="contact__placement">
-					<h2 class="contact__title">Шоурум №4</h2>
+					<h2 class="contact__title">Шоурум №&nbsp;4</h2>
 					<address class="contact__address">Леонтьевский переулок, дом 5/1</address>
 				</div>
 				<form class="contact__form">
@@ -862,7 +925,7 @@
 		</section>
 	</main>
 	<footer class="footer">
-		<div class="footer__container">
+		<div class="footer__container container">
 			<picture>
 				<img src="img/footer-logo.svg" alt="" class="footer__logo" alt="Blanchard художественная галерея">
 			</picture>
