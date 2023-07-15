@@ -1128,7 +1128,7 @@ html {
 	content: "";
 }
 
-.ac-text__wrapper {
+.ac-panel__wrapper {
 	display: flex;
 	width: 100%;
 	height: 341px;
@@ -1712,18 +1712,18 @@ html {
 	color: var(--mineShaft);
 }
 
-.social__links {
+.socials__links {
 	display: flex;
 	gap: 20px;
 }
 
-.social__link {
+.socials__link {
 	position: relative;
 	font-size: 0;
 	border-radius: 100%;
 }
 
-.social__link:focus-visible::after {
+.socials__link:focus-visible::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1733,7 +1733,7 @@ html {
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
-.social__link:hover::after {
+.socials__link:hover::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1743,11 +1743,11 @@ html {
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
-.social__link:active {
+.socials__link:active {
 	outline: 1px solid var(--amethyst);
 }
 
-.social__link:active::after {
+.socials__link:active::after {
 	background-color: transparent;
 }
 
