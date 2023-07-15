@@ -30,7 +30,7 @@ img {
 	margin: 0;
 }
 
-.page {
+html {
 	scroll-behavior: smooth;
 }
 
@@ -129,6 +129,7 @@ img {
 }
 
 .header__open-search {
+	display: none;
 	padding: 0;
 	background-color: transparent;
 	border: 0;
@@ -563,7 +564,7 @@ img {
 }
 
 .hero__wrapper {
-	width: 600px;
+	max-width: 600px;
 }
 
 .hero__background {
@@ -752,6 +753,26 @@ img {
 .gallery__checkbox-wrapper {
 	display: flex;
 	align-items: center;
+} 
+
+.gallery__checkbox:focus-visible~.gallery__checkbox-label {
+	color: var(--heliotrope);
+}
+
+.gallery__checkbox:focus-visible~.gallery__custom-checkbox {
+	border-color: var(--heliotrope);
+}
+
+.gallery__checkbox:hover~.gallery__custom-checkbox {
+	border-color: var(--heliotrope);
+}
+
+.gallery__checkbox:active~.gallery__checkbox-label {
+	color: var(--heliotrope);
+}
+
+.gallery__checkbox:active~.gallery__custom-checkbox {
+	border-color: var(--heliotrope);
 }
 
 .gallery__checkbox-wrapper:not(:last-child) {
@@ -1041,6 +1062,7 @@ img {
 .accordion__item.is-active .accordion__trigger svg {
 	background-color: var(--bilobaFlower);
 	outline: 2px solid var(--amethyst);
+	outline-offset: -2px;
 	transform: rotate(180deg);
 }
 
@@ -1173,33 +1195,16 @@ img {
 .events__slide {
 	display: flex;
 	flex-direction: column;
-	height: 700px;
-	padding: 310px 30px 10px 50px;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top;
-	background-color: white;
+	height: unset;
 	border: 1px solid var(--silver);
 }
 
-.events__slide_one {
-	background-image: url('../img/events_engraving-desktop.jpg');
-}
-
-.events__slide_two {
-	background-image: url('../img/events_discussion-desktop.jpg');
-}
-
-.events__slide_three {
-	background-image: url('../img/events_show-desktop.jpg');
-}
-
-.events__slide_four {
-	background-image: url('../img/events_john-desktop.jpg');
-}
-
-.events__slide_five {
-	background-image: url('../img/events_international-desktop.jpg');
+.events__text-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 396px;
+	height: 100%;
+	padding: 7px 10px 10px 49px;
 }
 
 .events__placement,

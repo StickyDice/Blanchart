@@ -20,13 +20,34 @@ if (viewWidth > 1690) {
 	gallerySpace = 50;
 	eventSpace = 50;
 	projectSpace = 50;
-} else {
+} else if (viewWidth > 900) {
+	eventSlide = 3;
+	slides = 2;
+	group = 2;
+	gallerySpace = 34;
+	eventSpace = 27;
+	projectSpace = 50;
+} else if (viewWidth > 624) {
 	eventSlide = 2;
 	slides = 2;
 	group = 2;
 	gallerySpace = 34;
 	eventSpace = 34;
-	projectSpace = 50;
+	projectSpace = 34;
+} else if (viewWidth > 470) {
+	eventSlide = 2;
+	slides = 2;
+	group = 1;
+	gallerySpace = 34;
+	eventSpace = 34;
+	projectSpace = 34;
+} else {
+	eventSlide = 1;
+	slides = 1;
+	group = 1;
+	gallerySpace = 34;
+	eventSpace = 34;
+	projectSpace = 34;
 }
 
 
@@ -215,10 +236,10 @@ function init() {
 const burgerButton = document.querySelector('.header__burger');
 const headerNav = document.querySelector('.header__nav');
 const burgerClose = document.querySelector('.burger__close');
-burgerButton.addEventListener('click', function() {
+burgerButton.addEventListener('click', function () {
 	headerNav.classList.add('active');
 })
-burgerClose.addEventListener('click', function() {
+burgerClose.addEventListener('click', function () {
 	headerNav.classList.remove('active');
 })
 
@@ -226,11 +247,11 @@ burgerClose.addEventListener('click', function() {
 const searchDrop = document.querySelector('.header__open-search');
 const searchClose = document.querySelector('.small-search__close');
 const searchForm = document.querySelector('.header__small-search');
-searchDrop.addEventListener('click', function() {
+searchDrop.addEventListener('click', function () {
 	searchForm.classList.add('dropped');
 })
 
-searchClose.addEventListener('click', function(btn) {
+searchClose.addEventListener('click', function (btn) {
 	btn.preventDefault();
 	searchForm.classList.remove('dropped');
 })
