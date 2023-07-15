@@ -238,10 +238,13 @@ const headerNav = document.querySelector('.header__nav');
 const burgerClose = document.querySelector('.burger__close');
 burgerButton.addEventListener('click', function () {
 	headerNav.classList.add('active');
-})
+	document.body.style.overflow = 'hidden';
+});
+
 burgerClose.addEventListener('click', function () {
 	headerNav.classList.remove('active');
-})
+	document.body.style.overflow = 'scroll';
+});
 
 // searchDrop
 const searchDrop = document.querySelector('.header__open-search');
@@ -255,3 +258,4 @@ searchClose.addEventListener('click', function (btn) {
 	btn.preventDefault();
 	searchForm.classList.remove('dropped');
 })
+

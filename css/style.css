@@ -90,7 +90,8 @@ html {
 .header__burger {
 	position: relative;
 	display: none;
-	width: 25px;
+	width: 36px;
+	height: 28px;
 
 	flex-direction: column;
 
@@ -105,17 +106,17 @@ html {
 }
 
 .burger__line_one {
-	top: -15px;
+	top: -1px;
 	width: 36px;
 }
 
 .burger__line_two {
-	top: -3px;
+	top: 11px;
 	width: 28px;
 }
 
 .burger__line_three {
-	top: 9px;
+	top: 23px;
 	width: 24px;
 }
 
@@ -123,7 +124,7 @@ html {
 	position: absolute;
 	bottom: 100%;
 	right: 50px;
-	display: flex;
+	display: none;
 	background-color: black;
 	transition: bottom .3s ease-in-out;
 }
@@ -605,6 +606,10 @@ html {
 	border-radius: 100px;
 }
 
+.hero__button:focus {
+	outline: none;
+}
+
 .hero__link {
 	padding: 22px 35px;
 	font-size: 18px;
@@ -613,6 +618,25 @@ html {
 	color: white;
 	text-decoration: none;
 	border-radius: 100px;
+	outline: 3px solid transparent;
+	transition: background-color .3s ease-in-out;
+}
+
+.hero__link:focus-visible {
+	outline: 2px solid var(--heliotrope);
+	outline-offset: 5px;
+}
+
+.hero__link:hover {
+	outline: 3px solid var(--bilobaFlower);
+	outline-offset: -3px;
+	transition: outline .3s ease-in-out;
+}
+
+.hero__link:active {
+	background-color: var(--royalPurple);
+	outline: 3px solid var(--bilobaFlower);
+	outline-offset: -3px;
 }
 
 /* *ABOUT */
@@ -664,6 +688,14 @@ html {
 
 .choices {
 	margin-bottom: 182.5px;
+}
+
+.choices:focus-visible {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.choices:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .is-focused .choices__inner,
@@ -753,7 +785,7 @@ html {
 .gallery__checkbox-wrapper {
 	display: flex;
 	align-items: center;
-} 
+}
 
 .gallery__checkbox:focus-visible~.gallery__checkbox-label {
 	color: var(--heliotrope);
@@ -882,10 +914,12 @@ html {
 	background-color: var(--doveGray);
 	border-radius: 100%;
 	border: none;
+	transition: background-color .3s ease-in-out;
 	cursor: pointer;
 }
 
 .gallery__navigation:focus-visible {
+	outline-offset: -2px;
 	outline: 2px solid black;
 }
 
@@ -894,6 +928,7 @@ html {
 }
 
 .gallery__navigation:active {
+	outline-offset: -2px;
 	outline: 2px solid black;
 	background-color: var(--royalPurple);
 }
@@ -994,14 +1029,13 @@ html {
 
 .accordion__item {
 	border: none;
-	margin-top: -1px;
+	margin-top: 0;
 }
 
 .accordion__item .accordion__trigger {
 	position: relative;
 	padding: 40.5px 0 42.5px 0;
 
-	font-family: Open Sans;
 	font-size: 24px;
 	font-weight: 600;
 	line-height: 32px;
@@ -1013,6 +1047,15 @@ html {
 	transition: border-color .3s ease-in-out;
 }
 
+.accordion__item:not(:first-child) .accordion__trigger {
+	/* border-top-color: transparent; */
+}
+
+.ac .ac-trigger:focus {
+	color: inherit;
+	outline: none;
+}
+
 .accordion__item .accordion__trigger span {
 	transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
@@ -1020,6 +1063,11 @@ html {
 .accordion__item .accordion__trigger:focus-visible span {
 	color: white;
 	background-color: var(--amethyst);
+}
+
+.accordion__item .accordion__trigger:focus-visible {
+	border-color: var(--amethyst);
+	z-index: 10;
 }
 
 .accordion__item .accordion__trigger svg {
@@ -1040,11 +1088,12 @@ html {
 
 .accordion__item .accordion__trigger:hover {
 	border-color: var(--amethyst);
-	z-index: 10;
+	/* z-index: 10; */
 }
 
 .accordion__item .accordion__trigger:hover span {
 	color: var(--amethyst);
+	background-color: transparent;
 }
 
 .accordion__item .accordion__trigger:hover svg {
@@ -1055,8 +1104,13 @@ html {
 	border-color: var(--royalPurple);
 }
 
+.accordion__item.is-active .accordion__trigger:hover {
+	border-color: var(--amethyst);
+}
+
 .accordion__item.is-active .accordion__trigger span {
 	color: var(--royalPurple);
+	background-color: transparent;
 }
 
 .accordion__item.is-active .accordion__trigger svg {
@@ -1104,6 +1158,7 @@ html {
 .ac__artist-link,
 .ac__artist-link:visited {
 	display: block;
+	width: max-content;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 32px;
@@ -1112,8 +1167,13 @@ html {
 	cursor: pointer;
 }
 
+.ac__artist-link:focus {
+	border: none;
+}
+
 .ac__artist-link:focus-visible {
-	background-color: var(--royalPurple);
+	background-color: var(--amethyst);
+	outline: none;
 }
 
 .ac__artist-link:hover {
@@ -1239,6 +1299,7 @@ html {
 }
 
 .events__more {
+	width: max-content;
 	margin-top: auto;
 	margin-bottom: 30px;
 	font-size: 16px;
@@ -1248,6 +1309,26 @@ html {
 	text-decoration-color: var(--amethyst);
 	text-underline-offset: 3px;
 	text-underline-position: under;
+}
+
+.ac-panel__link:focus-visible,
+.projects__more-link:focus-visible,
+.events__more:focus-visible {
+	color: white;
+	background-color: var(--amethyst);
+	outline: none;
+}
+
+.ac-panel__link:hover,
+.projects__more-link:hover,
+.events__more:hover {
+	color: var(--royalPurple);
+}
+
+.ac-panel__link:active,
+.projects__more-link:active,
+.events__more:active {
+	color: var(--mineShaft);
 }
 
 .events__swiper {
@@ -1711,4 +1792,3 @@ html {
 .footer__link:active path {
 	fill: var(--amethyst);
 }
-
