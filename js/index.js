@@ -1,57 +1,3 @@
-let slides,
-	eventSlide,
-	gallerySpace,
-	eventSpace,
-	projectSpace,
-	group;
-
-let viewWidth = window.innerWidth;
-if (viewWidth > 1690) {
-	eventSlide = 3;
-	slides = 3;
-	group = 3;
-	gallerySpace = 50;
-	eventSpace = 50;
-	projectSpace = 50;
-} else if (viewWidth > 1124) {
-	eventSlide = 3;
-	slides = 2;
-	group = 2;
-	gallerySpace = 50;
-	eventSpace = 50;
-	projectSpace = 50;
-} else if (viewWidth > 900) {
-	eventSlide = 3;
-	slides = 2;
-	group = 2;
-	gallerySpace = 34;
-	eventSpace = 27;
-	projectSpace = 50;
-} else if (viewWidth > 624) {
-	eventSlide = 2;
-	slides = 2;
-	group = 2;
-	gallerySpace = 34;
-	eventSpace = 34;
-	projectSpace = 34;
-} else if (viewWidth > 470) {
-	eventSlide = 2;
-	slides = 2;
-	group = 1;
-	gallerySpace = 34;
-	eventSpace = 34;
-	projectSpace = 34;
-} else {
-	eventSlide = 1;
-	slides = 1;
-	group = 1;
-	gallerySpace = 34;
-	eventSpace = 34;
-	projectSpace = 34;
-}
-
-
-
 // header dropdown
 const dropdownButtons = document.querySelectorAll('.dropdown__button');
 
@@ -74,9 +20,28 @@ for (let drop of dropdownButtons) {
 const gallerySwiper = new Swiper(".gallery__swiper", {
 	direction: "horizontal",
 	loop: true,
-	slidesPerGroup: group,
-	slidesPerView: slides,
-	spaceBetween: gallerySpace,
+	breakpoints: {
+		320: {
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+			spaceBetween: 34,
+		},
+		470: {
+			slidesPerGroup: 2,
+			slidesPerView: 2,
+			spaceBetween: 34,
+		},
+		1124: {
+			slidesPerGroup: 2,
+			slidesPerView: 2,
+			spaceBetween: 50,
+		},
+		1690: {
+			slidesPerGroup: 3,
+			slidesPerView: 3,
+			spaceBetween: 50,
+		}
+	},
 
 	slideClass: "gallery__slide",
 
@@ -119,9 +84,28 @@ for (let link of artistLinks) {
 // event
 const eventsSwiper = new Swiper(".events__swiper", {
 	direction: "horizontal",
-	slidesPerGroup: eventSlide,
-	slidesPerView: eventSlide,
-	spaceBetween: eventSpace,
+	breakpoints: {
+		320: {
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+			spaceBetween: 34,
+		},
+		470: {
+			slidesPerGroup: 2,
+			slidesPerView: 2,
+			spaceBetween: 34,
+		},
+		900: {
+			slidesPerGroup: 3,
+			slidesPerView: 3,
+			spaceBetween: 27,
+		},
+		1124: {
+			slidesPerGroup: 3,
+			slidesPerView: 3,
+			spaceBetween: 50,
+		},
+	},
 
 	navigation: {
 		nextEl: '.events__navigation_next',
@@ -143,9 +127,28 @@ tippy("[data-tippy-content]", {
 
 const projectsSwiper = new Swiper(".projects__swiper", {
 	loop: true,
-	slidesPerGroup: group,
-	slidesPerView: slides,
-	spaceBetween: projectSpace,
+	breakpoints: {
+		320: {
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+			spaceBetween: 34,
+		},
+		470: {
+			slidesPerGroup: 2,
+			slidesPerView: 1,
+			spaceBetween: 34,
+		},
+		900: {
+			slidesPerGroup: 2,
+			slidesPerView: 2,
+			spaceBetween: 50,
+		},
+		1690: {
+			slidesPerGroup: 3,
+			slidesPerView: 3,
+			spaceBetween: 50,
+		},
+	},
 
 	navigation: {
 		nextEl: ".projects__next-btn",
@@ -161,7 +164,9 @@ phoneMask.mask(selector);
 
 const validator = new JustValidate(".contact__form", {
 	errorLabelStyle: {
-		marginLeft: '30px',
+		position: 'absolute',
+		left: '30px',
+		top: '-20px',
 		fontSize: '12px',
 		fontWeight: '400',
 		lineHeight: '16px',
@@ -235,7 +240,7 @@ function init() {
 // burger
 const burgerButton = document.querySelector('.header__burger');
 const headerNav = document.querySelector('.header__nav');
-const burgerClose = document.querySelector('.burger__close');
+const burgerClose = document.querySelector('.burger-close');
 burgerButton.addEventListener('click', function () {
 	headerNav.classList.add('active');
 	document.body.style.overflow = 'hidden';
@@ -252,10 +257,13 @@ const searchClose = document.querySelector('.small-search__close');
 const searchForm = document.querySelector('.header__small-search');
 searchDrop.addEventListener('click', function () {
 	searchForm.classList.add('dropped');
-})
+});
 
 searchClose.addEventListener('click', function (btn) {
 	btn.preventDefault();
 	searchForm.classList.remove('dropped');
-})
+});
 
+// window.addEventListener('resize', function() {
+	
+// });

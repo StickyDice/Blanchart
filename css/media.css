@@ -38,6 +38,14 @@
 	.dropdown__item:not(:last-child) {
 		margin-right: 60px;
 	}
+
+	.contact__placement {
+		margin-bottom: 15px;
+	}
+
+	.contact__form {
+		margin-bottom: 15px;
+	}
 }
 
 @media (max-width: 1399px) {
@@ -407,6 +415,10 @@
 	.contact__form {
 		flex-wrap: wrap;
 		margin-bottom: 30px;
+	}
+
+	.contact__placement {
+		margin-bottom: 0;
 	}
 
 	.footer__container {
