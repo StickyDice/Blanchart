@@ -344,7 +344,7 @@ html {
 	flex-direction: column;
 	gap: 20px;
 	max-height: 220px;
-	overflow: scroll;
+	/* overflow: scroll; */
 }
 
 .simplebar-content {

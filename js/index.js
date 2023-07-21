@@ -264,6 +264,3 @@ searchClose.addEventListener('click', function (btn) {
 	searchForm.classList.remove('dropped');
 });
 
-// window.addEventListener('resize', function() {
-	
-// });
